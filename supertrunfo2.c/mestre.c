@@ -33,8 +33,8 @@ int main () {
  turismo1 = 13;
  turismo2 = 15;
 
-printf("*** JOGO SUPER TRUNFO ***\n");
-printf("Escolha o primeiro atríbuto:\n");
+printf("BEM-VINDO AO JOGO!\n");
+printf("Escolha o primeiro atríbuto.\n");
 printf("CARTA 1: %s\n", estado1);
 printf("CARTA 2: %s\n", estado2);
 printf(".1 População\n");
@@ -43,32 +43,32 @@ printf(".3 PIB\n");
 printf(".4 Densidade\n");
 printf(".5 turismo\n");
 
-printf("Escolha a primeira opção para comparar: ");
-scanf("%d", &jogador1);
+printf("Escolha a primeira comparação: ");
+scanf(" %d", &jogador1);
 
-jogador2 = rand () % 5 + 1;
 
-switch (jogador1){
+switch (jogador1)
+{
 
 case 1:
-printf("jogador: população -");
+printf("jogador: populacao\n");
 jogador1 = populacao1 > populacao2 ? 1 : 0;
 break;
 
 case 2:
-printf("jogador: area -");
+printf("jogador: area\n");
 jogador1 = area1 > area2 ? 1 : 0;
 break;
 
-case 3:("jogador: PIB -");
+case 3:("jogador: PIB\n");
 jogador1 = PIB1 > PIB2 ? 1 : 0;
 break;
 
-case 4:("jogador: densidade -");
+case 4:("jogador: densidade\n");
 jogador1 = densidade1 < densidade2 ? 1 : 0;
 break;
 
-case 5:("jogador: pontos_turísticos -");
+case 5:("jogador: pontos_turísticos\n");
 jogador1 = turismo1 > turismo2 ? 1: 0;
 break;
 
@@ -77,7 +77,7 @@ printf("opção invalida\n");
 break;
 }
 
-printf("Escolha o segundo atríbuto:\n");
+printf("Escolha o segundo atríbuto.\n");
 printf("CARTA 1: %s\n", estado1);
 printf("CARTA 2: %s\n", estado2);
 printf(".1 População\n");
@@ -86,33 +86,35 @@ printf(".3 PIB\n");
 printf(".4 Densidade\n");
 printf(".5 turismo\n");
 
-printf("Escolha a segunda opção para comparar: ");
-scanf("%d", &jogador1);
+printf("Escolha a segunda comparação: ");
+scanf(" %d", &jogador2);
+
 if (jogador1 == jogador2){
  printf("Voce escolheu a mesma opção!\n");
 } else {
 
- switch (jogador2) {
+ switch (jogador2) 
+ {
 
     case 1:
-    printf("jogador: população -");
+    printf("jogador: populacao\n");
     jogador2 = populacao1 > populacao2 ? 1 : 0;
     break;
     
     case 2:
-    printf("jogador: area -");
+    printf("jogador: area\n");
     jogador2 = area1 > area2 ? 1 : 0;
     break;
     
-    case 3:("jogador: PIB -");
+    case 3:("jogador: PIB\n");
     jogador2 = PIB1 > PIB2 ? 1 : 0;
     break;
     
-    case 4:("jogador: densidade -");
+    case 4:("jogador: densidade\n");
     jogador2 = densidade1 < densidade2 ? 1 : 0;
     break;
     
-    case 5:("jogador: pontos_turísticos -");
+    case 5:("jogador: pontos_turísticos\n");
     jogador2 = turismo1 > turismo2 ? 1: 0;
     break;
     
@@ -123,11 +125,11 @@ if (jogador1 == jogador2){
 
  if (jogador1 && jogador2)
 {
-   printf("### Parabéns, voce ganhou!\n");
-} else if(jogador1 |= jogador2) {
-    printf("### Empatou! ###\n");
+   printf("Parabéns, voce ganhou!\n");
+} else if(jogador1 != jogador2){
+    printf("Empatou!\n");
 } else {
-    ("### Infelizmente voce perdeu ###");
+    (" Infelizmente, voce perdeu!\n");
  }
 }
 return 0;
